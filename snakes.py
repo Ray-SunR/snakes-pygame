@@ -154,6 +154,12 @@ def restart(game_surface):
 			if e.type == pygame.QUIT:
 				# The user closed the window.
 				return False
+			elif e.type == pygame.KEYDOWN:
+				if e.key == pygame.K_ESCAPE:
+					return False
+				elif e.key == pygame.K_SPACE:
+					play_game()
+					return False
 
 
 if __name__ == '__main__':
